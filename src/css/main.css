@@ -1,0 +1,93 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.canvas-container {
+  display: block;
+  position: absolute;
+  background: #fff;
+  border: 1px solid black;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+  width: 100%;
+  height: 100%;
+}
+
+.score {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  margin: 0.5em;
+  font-size: 2vw;
+  color: #fff;
+}
+
+.score:before {
+  content: 'Score: ';
+}
+
+h1, h2, span, p {
+  font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+  font-size: 5vw;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+p {
+  font-size: 2vw;
+}
+
+.title-container, .gameover {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+
+.title-container, .gameover {
+  position: absolute;
+  top: 25%;
+}
+
+.title {
+  color: #d30000;
+}
+
+.title span {
+
+}
+
+.gameover {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+
+.gameover h1 {
+  color: #fff;
+  /* text-shadow: 2px 2px #000; */
+}
+
+.hidden {
+  display: none;
+}
