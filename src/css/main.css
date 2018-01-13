@@ -61,19 +61,34 @@ p {
   text-align: center;
   width: 100%;
   z-index: 5;
-}
-
-.title-container, .gameover {
-  position: absolute;
-  top: 25%;
+  height: 100%;
 }
 
 .title {
   color: #d30000;
+  position: relative;
+  top: 25%;
 }
 
-.title span {
+.start, .restart {
+  position: relative;
+  top: 26%;
+  animation-name: flickering-text;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
 
+.credits {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.credits p {
+  font-size: 1.5vw;
+  color: #342c74;
 }
 
 .gameover {
@@ -85,9 +100,19 @@ p {
 
 .gameover h1 {
   color: #fff;
-  /* text-shadow: 2px 2px #000; */
+  position: relative;
+  top: 25%;
 }
 
 .hidden {
   display: none;
+}
+
+@keyframes flickering-text {
+  0% {
+    color: #5ef4ff;
+  }
+  100% {
+    color: #0000ff;
+  }
 }
