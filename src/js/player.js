@@ -1,3 +1,4 @@
+import audio from './audio';
 import physics from './physics';
 
 const frames = {
@@ -67,6 +68,7 @@ function jump() {
   jumping = true;
   currentFrame = frames.JUMP;
   currentVelocity = JUMP_VELOCITY;
+  audio.playJumpSound();
 }
 
 function calcPositionWithGravity(t) {

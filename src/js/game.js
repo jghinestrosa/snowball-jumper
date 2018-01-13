@@ -1,3 +1,4 @@
+import audio from './audio';
 import player from './player';
 import input from './input';
 import ball from './ball';
@@ -91,13 +92,14 @@ function setPlayerInitialPosition(player) {
 }
 
 function startLoop() {
+  audio.playBackgroundMusic();
   window.requestAnimationFrame(loop);
 }
 
 function loop(timestamp) {
   clear(ctx);
 
-  if (started) {
+  if (started && !gameOver) {
     handleBallCreation(timestamp);
     update();
     checkCollisions();
@@ -199,6 +201,8 @@ function start() {
 }
 
 function finish() {
+  audio.playCollisionSound();
+  audio.stopBackgroundMusic();
   gameOver = true;
   gameOverContainer.classList.remove('hidden');
 }
@@ -210,6 +214,7 @@ function restart() {
   player.goBackToStartPosition();
   gameOverContainer.classList.add('hidden');
   gameOver = false;
+  audio.playBackgroundMusic();
 }
 
 export default {

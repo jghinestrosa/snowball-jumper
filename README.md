@@ -19,11 +19,17 @@ Probably I will add some improvements and refactor in my spare time from here on
 
 ## Resources
 
-The only resource I had to use for the game itself is the awesome font: [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)! Thank you very much!
+### Music
+
+The music and the sounds have been made by my good friend [Antonio Vicente](https://antoniovm.com), an excellent developer and even better musician. I asked him to play the game and then, according to his own gaming experience, I gave him the freedom to come up with the sounds he felt would fit best. Thank you Antonio!
+
+### Font
+
+Another resource I had to use for the game itself is the awesome font: [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)! Thank you very much!
+
 
 ## Missing features
 
-- Music
 - Service worker
 - Web Manifest
 
