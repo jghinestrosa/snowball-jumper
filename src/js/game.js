@@ -27,6 +27,7 @@ let balls = [];
 function initialize(data) {
   setMainComponents(data);
   initializeSize(canvas);
+  initializeVisibilityHandler();
   initializeContext(canvas);
   initializeInput();
   updateScore();
@@ -62,6 +63,18 @@ function onWindowResize() {
   canvasContainer.style.top = `${center}px`;
 }
 
+function initializeVisibilityHandler() {
+  document.addEventListener('visibilitychange', onVisibilityChange);
+}
+
+function onVisibilityChange(event) {
+  if (!document.hidden && started && !gameOver) {
+    audio.resumeBackgroundMusic();
+    return;
+    }
+  audio.stopBackgroundMusic();
+}
+
 function initializeContext(canvas) {
   ctx = canvas.getContext('2d');
   ctx.mozImageSmoothingEnabled = false;
@@ -92,7 +105,6 @@ function setPlayerInitialPosition(player) {
 }
 
 function startLoop() {
-  audio.playBackgroundMusic();
   window.requestAnimationFrame(loop);
 }
 
@@ -198,6 +210,7 @@ function start() {
   started = true;
   titleContainer.classList.add('hidden');
   scoreContainer.classList.remove('hidden');
+  audio.playBackgroundMusic();
 }
 
 function finish() {

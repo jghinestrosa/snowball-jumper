@@ -8,6 +8,10 @@ function playBackgroundMusic() {
   backgroundMusic.play();
 }
 
+function resumeBackgroundMusic() {
+  backgroundMusic.play();
+}
+
 function stopBackgroundMusic() {
   backgroundMusic.pause();
 }
@@ -22,6 +26,7 @@ function playCollisionSound() {
 
 export default {
   playBackgroundMusic,
+  resumeBackgroundMusic,
   stopBackgroundMusic,
   playJumpSound,
   playCollisionSound
