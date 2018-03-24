@@ -17,6 +17,7 @@ function onKeyDown(onPlayerAction) {
 
 function onMouseDown(onPlayerAction) {
   return (event) => {
+    event.preventDefault();
     onPlayerAction();
   };
 }
