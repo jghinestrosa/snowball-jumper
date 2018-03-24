@@ -1,0 +1,6 @@
+{
+  "name": "Snowball Jumper",
+  "description": "A game for the winter",
+  "start_url": "/",
+  "display": "standalone"
+}
